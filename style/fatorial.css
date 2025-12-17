@@ -1,0 +1,38 @@
+.fatorial {
+    text-align: center;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+.titulo-fatorial {
+    font-size: 2.5em;
+    margin: 1em 0 3em 0;
+}
+
+.fatorial-numero {
+    background-color: #282c34;
+    border-radius: 16px;
+    padding: 2em;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.botao-fatorial {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-bottom: 1em;
+    color: #282c34;
+}
+
+.resultado-fatorial {
+    font-size: 1.5em;
+    margin-top: 1em;
+    font-weight: bold;
+    background-color: #ccc;
+    padding: 1em;
+    border-radius: 8px;
+    color: #282c34;
+}   

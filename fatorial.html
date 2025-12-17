@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/fatorial.css">
     <title>Desafio JS</title>
 </head>
 
@@ -42,14 +43,24 @@
             <div class="container__conteudo">
                 <h2>Bem vindo para o mundo do Fatorial</h2>
                 <div class="container__informacoes">
-                    <div class="container__texto">
+                    <h2 class="titulo-fatorial">Digite um número:</h2>
+                    <div class="fatorial">
+                        <div class="fatorial-numero">
+                            <input id="numero" type="number" class="botao-fatorial">
+                            <button onclick="calcularFatorial()" class="botao-fatorial back">Calcular Fatorial</button>
+                        </div>
+
+                        <div class="fatorial-resultado">
+                            <h1 class="resultado">Fatorial:</h1>
+                            <p id="resultado-fato" class="resultado-fatorial"></p>
+                        </div>
                     </div>
 
                 </div>
             </div>
         </div>
     </main>
-    <script src="app.js" defer></script>
+    <script src="fatorial.js" defer></script>
 </body>
 
 </html>
