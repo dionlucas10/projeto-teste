@@ -9,7 +9,8 @@
 
 body {
     background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     padding-top: 60px;
@@ -38,7 +39,7 @@ body::before {
     top: 0;
     left: 0;
     width: 100%;
-    background: transparent;
+    /* background: rgba(0,0,0,0.8); */
     z-index: 10;
     align-items: center;
     padding: 10px 0;
@@ -67,8 +68,10 @@ body::before {
 
 
 .container {
-    width: 1200px;
-    height: 600px;
+    width: auto;
+    max-width: 1200px;
+    min-height: 600px;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -76,8 +79,9 @@ body::before {
     border: 1px solid #1875E8;
     box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
     background-image: url("img/Ruido.png");
-    background-size: 100% 100%;
+    background-size: cover;
     position: relative;
+    margin: 0 auto;
 }
 
 .container__conteudo {
@@ -131,4 +135,175 @@ button {
 h2 {
     font-size: 32px;
     font-weight: 400;
+}
+
+/* Responsividade para telas pequenas (celulares) */
+@media (max-width: 768px) {
+    body {
+        padding-top: 80px;
+        align-items: flex-start;
+        align-items: center;
+    }
+
+    body::before {
+        background-position: center;
+        opacity: 0.2;
+    }
+
+    .cabecalho {
+        /* Layout */
+        flex-direction: row;
+        align-items: stretch;
+        padding: 10px 0;
+    }
+
+    .container-cabecalho {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .lista-menu {
+        display: flex;
+        gap: 30px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .lista-menu-link {
+        font-size: 16px;
+        padding: 8px 10px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 6px;
+        transition: background 0.3s ease;
+    }
+
+    .container {
+        width: 95%;
+        height: auto;
+        flex-direction: column;
+        padding: 1em;
+        align-items: center;
+        background-image: none;
+        border-radius: 16px;
+    }
+
+    .container__conteudo {
+        margin: 1em 0 0 0;
+    }
+
+    .container__botao {
+        font-size: 18px;
+        padding: 12px 20px;
+        margin-top: 12px;
+    }
+
+    .container__texto {
+        margin: 12px 0;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+}
+
+/* Responsividade para telas muito pequenas */
+@media (max-width: 480px) {
+    body {
+        padding-top: 100px;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .cabecalho {
+        /* Layout */
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .container-cabecalho {
+        width: 100%;
+    }
+
+    .lista-menu {
+        gap: 30px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .lista-menu-link {
+        font-size: 16px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 6px;
+        padding: 8px 10px;
+        transition: background 0.3s ease;
+    }
+
+    .container {
+        width: 100%;
+        border-radius: 16px;
+        padding: 0.5em;
+    }
+
+    .container__conteudo {
+        margin: 0.5em 0 0 0;
+    }
+
+    .container__botao {
+        font-size: 16px;
+        padding: 10px 16px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+}
+
+/* Responsividade para telas médias (tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        width: 90%;
+        height: 500px;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .lista-menu-link {
+        font-size: 22px;
+    }
+}
+
+/* Responsividade para telas grandes (desktops) */
+@media (min-width: 1025px) {
+    .container {
+        width: 1400px;
+        height: 700px;
+    }
+
+    h1 {
+        font-size: 80px;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
 }
