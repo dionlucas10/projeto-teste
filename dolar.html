@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style/imc.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/dolar.css">
     <title>Desafio JS</title>
 </head>
 
@@ -24,7 +24,7 @@
                     <a href="fatorial.html" class="lista-menu-link">Valor do fatorial</a>
                 </li>
                 <li class="lista-menu-item">
-                    <a href="dolar.html" class="lista-menu-link">Valor em dólar</a>
+                    <a href="index.html" class="lista-menu-link">Valor em dólar</a>
                 </li>
                 <li class="lista-menu-item">
                     <a href="retangular.html" class="lista-menu-link">Area de retângulo</a>
@@ -41,28 +41,24 @@
     <main>
         <div class="container">
             <div class="container__conteudo">
-                <h2>Bem vindo para o mundo do IMC</h2>
-                <h2 class="titulo-imc">Digite os Valores:</h1>
-                    <div class="imc">
-                        <div class="imc-numeros">
-                            <label for="peso">Peso (kg): </label>
-                            <input id="peso" type="number" class="botao-imc">
-                            <label for="altura">Altura (m): </label>
-                            <input id="altura" type="number" class="botao-imc">
-                            <button onclick="calcularIMC()" class="botao-imc back">Calcular IMC</button>
-                        </div>
-
-                        <div class="imc-resultado">
-                            <h1 class="resultado">IMC:</h1>
-                            <p class="resultado-imc"></p>
-                        </div>
-                        <p id="tabela" class="descricao-imc" ></p>
-
+                <h2>Boas vindo ao mundo do Dólar</h2>
+                <h2 class="titulo-dolar">Digite os Valores:</h2>
+                <div class="dolar">
+                    <div class="dolar-numeros">
+                        <label class="texto-dolar" for="valorReal">Valor em Real (R$): </label>
+                        <input id="valorReal" type="number" class="botao-dolar">
+                        <button onclick="converterDolar()" class="botao-dolar back">Converter para Dólar (US$)</button>
                     </div>
+
+                    <div class="dolar-resultado">
+                        <h1 class="resultado">Valor em Dólar (US$):</h1>
+                        <p id="resul-dolar" class="resultado-dolar"></p>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
-    <script src="imc.js" defer></script>
+    <script src="dolar.js"></script>
 </body>
 
 </html>
