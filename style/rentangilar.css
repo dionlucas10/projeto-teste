@@ -1,0 +1,43 @@
+
+.titulo-rentagular{
+    padding: 2%;
+}
+
+.retangular-numeros{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.texto-retangular{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.botao-retangular{
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    color: black;
+}
+
+.retangular-resultado{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 10px;
+    width: 100%;
+}
+
+.resultado-retangular{
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #ccc;
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #999;
+}

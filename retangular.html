@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/rentangilar.css">
     <title>Desafio JS</title>
 </head>
 
@@ -41,14 +42,25 @@
         <div class="container">
             <div class="container__conteudo">
                 <h2>Área de Retângulo</h2>
-                <div class="container__informacoes">
-                    <div class="container__texto">
+                <h2 class="titulo-rentagular">Digite os Valores:</h2>
+                <div class="retangular">
+                    <div class="retangular-numeros">
+                        <label class="texto-retangular" for="base">Base (cm): </label>
+                        <input id="base" type="number" class="botao-retangular">
+                        <label class="texto-retangular" for="altura">Altura (cm): </label>
+                        <input id="altura" type="number" class="botao-retangular">
+                        <button onclick="calcularAreaRetangulo()" class="botao-retangular back">Calcular Área</button>
+                    </div>
+                    <div class="retangular-resultado">
+                        <h1 class="resultado">Área do Retângulo (cm²):</h1>
+                        <p id="resul-retangular" class="resultado-retangular"></p>
+                        <h1 class="resultado">Perímetro do Retângulo (cm):</h1>
+                         <p id="Perimetro" class="resultado-retangular"></p>
                     </div>
                 </div>
             </div>
-        </div>
     </main>
-    <script src="app.js" defer></script>
+    <script src="retangular.js" defer></script>
 </body>
 
 </html>

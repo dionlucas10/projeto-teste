@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/cicular.css">
     <title>Desafio JS</title>
 </head>
 
@@ -41,15 +42,24 @@
         <div class="container">
             <div class="container__conteudo">
                 <h2>Bem vindo para o mundo do IMC</h2>
-                <div class="container__informacoes">
-                    <div class="container__texto">
+                <h2 class="titulo-circular">Digite os Valores:</h2>
+                <div class="circular">
+                    <div class="circular-numeros">
+                        <label class="texto-circular" for="raio">Raio (cm): </label>
+                        <input id="raio-num" type="number" class="botao-circular">
+                        <button onclick="calcularPerimetroCircular()" class=" back">Calcular Perímetro</button>
                     </div>
 
-                </div>
+                    <div class="circular-resultado">
+                        <h1 class="resultado">Área Circular (cm²):</h1>
+                        <p id="resul-raio" class="resultado-circular"></p>
+                        <h1 class="resultado">Perímetro Circular (cm):</h1>
+                        <p id="resul-circular" class="resultado-circular"></p>
+                    </div>
             </div>
         </div>
     </main>
-    <script src="app.js" defer></script>
+    <script src="circular.js" defer></script>
 </body>
 
 </html>
