@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/tabuada.css">
     <title>Desafio JS</title>
 </head>
 
@@ -41,14 +42,32 @@
         <div class="container">
             <div class="container__conteudo">
                 <h2>Tabuada</h2>
-                <div class="container__informacoes">
-                    <div class="container__texto">
+                <h2 class="titulo-tabuada">Digite um número:</h2>
+                <div class="tabuada">
+                    <div class="tipo-de-conta">
+                        <label class="texto-tabuada" for="tipo-conta">Tipo de conta:</label>
+                        <select id="tipo-conta" class="botao-tabuada">
+                            <option value="adicao">Adição</option>
+                            <option value="subtracao">Subtração</option>
+                            <option value="multiplicacao">Multiplicação</option>
+                            <option value="divisao">Divisão</option>
+                    </div>
+                    <div class="tabuada-numeros">
+                        <label class="texto-tabuada" for="numero-tabuada">Primeiro número: </label>
+                        <input id="numero-tabuada" type="number" class="botao-tabuada">
+                        <label class="texto-tabuada" for="numero-tabuada2">Segundo número: </label>
+                        <input id="numero-tabuada2" type="number" class="botao-tabuada">
+                        <button onclick="calcularTabuada()" class="botao-tabuada">Calcular Tabuada</button>
+                    </div>
+
+                    <div class="tabuada-resultado">
+                        <h1 class="resultado">Resultado:</h1>
+                        <p id="resul-tabuada" class="resultado-tabuada"></p>
                     </div>
                 </div>
             </div>
-        </div>
     </main>
-    <script src="app.js" defer></script>
+    <script src="tabuada.js" defer></script>
 </body>
 
 </html>
